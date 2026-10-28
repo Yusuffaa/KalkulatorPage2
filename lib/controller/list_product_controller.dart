@@ -3,14 +3,16 @@ import 'package:flutter_application_1/Models/produk_model.dart';
 import 'package:get/get.dart';
 
 class ListProductController extends GetxController {
-  List<ProdukModel> listProduk = [
+
+
+  RxList<ProdukModel> listProduk = [
     ProdukModel(
       namaProduk: "Samsung Galaxy Fold",
       harga: "10 juta",
       description: "Smartphone lipat Samsung dengan layar yang luas dan performa tinggi.",
       image: "assets/Image/samsungfold.jpg",
       reviews: "125 Reviews",
-      rating: 4.8,
+      rating: "4.5",
       namaToko: "Samsung Official Store",
     ),
 
@@ -20,7 +22,7 @@ class ListProductController extends GetxController {
       description: "Smartphone lipat dengan desain compact dan modern.",
       image: "assets/Image/zflip.jpg",
       reviews: "98 Reviews",
-      rating: 4.7,
+      rating: "4.7",
       namaToko: "Samsung Official Store",
     ),
 
@@ -30,7 +32,7 @@ class ListProductController extends GetxController {
       description: "iPhone dengan performa tinggi, kamera berkualitas, dan desain premium.",
       image: "assets/Image/ip15promax.jpg",
       reviews: "250 Reviews",
-      rating: 4.9,
+      rating: "4.9",
       namaToko: "Apple Official Store",
     ),
 
@@ -40,7 +42,7 @@ class ListProductController extends GetxController {
       description: "Konsol game generasi terbaru dengan performa grafis yang sangat baik.",
       image: "assets/Image/ps5.jpg",
       reviews: "180 Reviews",
-      rating: 4.8,
+      rating: "4.8",
       namaToko: "PlayStation Official Store",
     ),
 
@@ -50,8 +52,8 @@ class ListProductController extends GetxController {
       description: "Konsol gaming dengan performa tinggi dan penyimpanan besar.",
       image: "assets/Image/xbox.jpg",
       reviews: "150 Reviews",
-      rating: 4.7,
+      rating: "4.7",
       namaToko: "Xbox Official Store",
     ),
-  ];
+  ].obs;
 }

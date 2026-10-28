@@ -4,7 +4,7 @@ class ProdukModel {
   String description;
   String image; 
   String reviews;
-  double rating;
+  String rating;
   String namaToko;
 
   ProdukModel(

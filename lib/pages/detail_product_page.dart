@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Models/produk_model.dart';
+// import 'package:flutter_application_1/Models/produk_model.dart';
+import 'package:flutter_application_1/controller/detail_list_controller.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_instance/src/extension_instance.dart';
 
 class DetailProductPage extends StatelessWidget {
-  const DetailProductPage({
-    super.key,required this.produk,});
-
-  final ProdukModel produk;
+  const DetailProductPage({super.key});
 
   @override
   Widget build(BuildContext context) {
+
+    final controller = Get.put(DetailListController());
+
     return Scaffold(
       appBar: AppBar(
         title: const Text("Detail Produk"),
@@ -23,9 +26,9 @@ class DetailProductPage extends StatelessWidget {
 
             SizedBox(
               width: double.infinity,
-              height: 300,
+              height: 500,
               child: Image.asset(
-                produk.image,
+                controller.image,
                 fit: BoxFit.cover,
               ),
             ),
@@ -38,7 +41,7 @@ class DetailProductPage extends StatelessWidget {
 
                   
                   Text(
-                    produk.namaProduk,
+                    controller.namaProduk,
                     style: const TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
@@ -49,7 +52,7 @@ class DetailProductPage extends StatelessWidget {
 
                  
                   Text(
-                    produk.harga,
+                    controller.harga,
                     style: const TextStyle(
                       fontSize: 22,
                       fontWeight: FontWeight.bold,
@@ -71,7 +74,7 @@ class DetailProductPage extends StatelessWidget {
                       const SizedBox(width: 5),
 
                       Text(
-                        produk.rating.toString(),
+                        controller.rating,
                         style: const TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
@@ -81,7 +84,7 @@ class DetailProductPage extends StatelessWidget {
                       const SizedBox(width: 10),
 
                       Text(
-                        produk.reviews,
+                        controller.reviews,
                         style: const TextStyle(
                           color: Colors.grey,
                         ),
@@ -102,7 +105,7 @@ class DetailProductPage extends StatelessWidget {
                       const SizedBox(width: 10),
 
                       Text(
-                        produk.namaToko,
+                        controller.namaToko,
                         style: const TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
@@ -125,7 +128,7 @@ class DetailProductPage extends StatelessWidget {
                   const SizedBox(height: 10),
 
                   Text(
-                    produk.description,
+                    controller.description,
                     style: const TextStyle(
                       fontSize: 16,
                       height: 1.5,
@@ -140,9 +143,7 @@ class DetailProductPage extends StatelessWidget {
                     width: double.infinity,
                     height: 50,
                     child: ElevatedButton(
-                      onPressed: () {
-                        
-                      },
+                      onPressed: () {},
                       child: const Text(
                         "Beli Sekarang",
                         style: TextStyle(
