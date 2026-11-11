@@ -21,8 +21,7 @@ class ProfilePage extends StatelessWidget {
         actions: const [
           Icon(Icons.add_box_outlined, color: Colors.black),
           SizedBox(width: 20),
-          Icon(Icons.menu, color: Colors.black),
-          SizedBox(width: 15),
+          
         ],
       ),
 
